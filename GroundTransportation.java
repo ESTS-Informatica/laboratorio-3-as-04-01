@@ -9,7 +9,7 @@ public class GroundTransportation extends Transport
 {
     //Atributos
     private String licensePlate;
-    private static final double honorary = 0.03;
+    private static final double HONORARY = 3;
     
     public GroundTransportation(String licensePlate)
     {
@@ -22,7 +22,6 @@ public class GroundTransportation extends Transport
         
         else {licensePlate = "1234";}
         
-        setFees(honorary);
     }
     
     /** GETS **/
@@ -32,10 +31,51 @@ public class GroundTransportation extends Transport
         return licensePlate;
     }
     
+    public double getFees()
+    {
+        return HONORARY;
+    }
+    
+    @Override
+    public double getPriceWithFees()
+    {
+        double price = getPrice();
+        return price * (1.0 + (this.HONORARY * 0.01));
+        
+    }
+    
+    @Override
+    public String getTransportType()
+    {
+        return "Transporte Terrestre";
+    }
+    
+    @Override
+    public String toString()
+    {
+        final StringBuilder sb = new StringBuilder();
+
+        sb.append(String.format("\n%15s: %s\n", "Tipo Transporte", getTransportType()));  
+        sb.append(String.format("%15s: %s\n", "ID", super.getId()));
+        sb.append(String.format("%15s: %s\n", "Origem", super.getOrigin()));
+        sb.append(String.format("%15s: %s\n", "Destino", super.getDestination()));
+        sb.append(String.format("%15s: %5.2f€\n", "Preço", super.getPrice()));
+        sb.append(String.format("%15s: %4.2f%%\n", "Honorarios", getFees()));
+        sb.append(String.format("%15s: %4.2f€\n", "Preço Final", getPriceWithFees()));
+        sb.append(String.format("%15s: %s\n", "Matricula", getLicensePlate()));
+     
+        return sb.toString();
+    }
+    
     /** SETS **/
     
     public void setLicensePlate(String newLicensePlate)
     {
         licensePlate = newLicensePlate;
     }
+    
+    
+    /** METHODS **/
+    
+    
 }
