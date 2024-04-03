@@ -25,16 +25,26 @@ public class AirTransportation extends Transport
         }
     }
     
+    /** GETS **/
+    
+    public String getName()
+    {
+        return this.name;
+    }
+    
+    public int getNumberOfContainers()
+    {
+        return this.numberOfContainers;
+    }
+    
+    
+    /** SETS **/
+    
     public void setName(String name)
     {
         if(name!=null|| name !=""){
             this.name = name;
         }
-    }
-    
-    public String getName()
-    {
-        return this.name;
     }
     
     public void setNumberOfContainers(int numberOfContainers)
@@ -45,8 +55,5 @@ public class AirTransportation extends Transport
         }
     }
     
-    public int getNumberOfContainers()
-    {
-        return this.numberOfContainers;
-    }
+    
 }
