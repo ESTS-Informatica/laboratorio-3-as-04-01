@@ -37,7 +37,7 @@ public class AirTransportation extends Transport
         return this.name;
     }
     
-    public void setNumberOfContainers()
+    public void setNumberOfContainers(int numberOfContainers)
     {
         if(numberOfContainers!=0){ this.numberOfContainers = 1;}
         else{
