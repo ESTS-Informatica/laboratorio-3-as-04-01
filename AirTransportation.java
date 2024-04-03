@@ -25,8 +25,7 @@ public class AirTransportation extends Transport
         }
     }
     
-<<<<<<< Updated upstream
-=======
+
     /** GETS **/
     
     public String getName()
@@ -53,17 +52,12 @@ public class AirTransportation extends Transport
     
     /** SETS **/
     
->>>>>>> Stashed changes
+
     public void setName(String name)
     {
         if(name!=null|| name !=""){
             this.name = name;
         }
-    }
-    
-    public String getName()
-    {
-        return this.name;
     }
     
     public void setNumberOfContainers(int numberOfContainers)
@@ -74,11 +68,6 @@ public class AirTransportation extends Transport
         }
     }
     
-<<<<<<< Updated upstream
-    public int getNumberOfContainers()
-    {
-        return this.numberOfContainers;
-=======
     /** METHODS **/
     @Override
     public String toString()
@@ -96,6 +85,6 @@ public class AirTransportation extends Transport
         sb.append(String.format("%15s: %s\n", "Nome", this.getName()));
         sb.append(String.format("%15s: %s\n", "NºContentores", this.getNumberOfContainers()));
         return sb.toString();
->>>>>>> Stashed changes
+
     }
 }
