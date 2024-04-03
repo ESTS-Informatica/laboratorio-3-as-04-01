@@ -19,7 +19,7 @@ public class AirTransportation extends Transport
             this.name = name;
         }
         
-        if(numberOfContainers!=0){ this.numberOfContainers = 10;}
+        if(numberOfContainers<=0){ this.numberOfContainers = 10;}
         else{
             this.numberOfContainers = numberOfContainers;
         }
@@ -62,7 +62,7 @@ public class AirTransportation extends Transport
     
     public void setNumberOfContainers(int numberOfContainers)
     {
-        if(numberOfContainers!=0){ this.numberOfContainers = 15;}
+        if(numberOfContainers <=0){ this.numberOfContainers = 15;}
         else{
             this.numberOfContainers = numberOfContainers;
         }
