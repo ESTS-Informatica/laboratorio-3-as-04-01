@@ -7,7 +7,7 @@
  */
 public class Van extends GroundTransportation
 {
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
+    //Variables
     private int packages;
 
     /**
