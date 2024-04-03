@@ -15,7 +15,7 @@ public class GroundTransportation extends Transport
     {
         super();
         
-        if(licensePlate != null || licensePlate == "")
+        if(licensePlate != null || licensePlate != "")
         {
             this.licensePlate = licensePlate;
         }
@@ -50,6 +50,17 @@ public class GroundTransportation extends Transport
         return "Transporte Terrestre";
     }
     
+    
+    /** SETS **/
+    
+    public void setLicensePlate(String newLicensePlate)
+    {
+        licensePlate = newLicensePlate;
+    }
+    
+    
+    /** METHODS **/
+    
     @Override
     public String toString()
     {
@@ -66,16 +77,4 @@ public class GroundTransportation extends Transport
      
         return sb.toString();
     }
-    
-    /** SETS **/
-    
-    public void setLicensePlate(String newLicensePlate)
-    {
-        licensePlate = newLicensePlate;
-    }
-    
-    
-    /** METHODS **/
-    
-    
 }
